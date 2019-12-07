@@ -1,0 +1,15 @@
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            clientId: # Google Developer Console Client ID
+            clientSecret: # Google Developer Console Client Secret
+            redirectUrlTemplate: "{baseUrl}/login/oauth2/code/{registrationId}"
+            scope:
+              - email
+              -  profile
+
+server:
+  port: 8081
